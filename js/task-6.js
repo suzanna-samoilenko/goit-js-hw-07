@@ -21,6 +21,8 @@ function creatMarkup() {
 let size = 30;
 
 function createBoxes(amount) {
+  destroyBoxes();
+
   for (let i = 0; i < amount; i++) {
     const div = document.createElement('div');
     div.style.width = `${size}px`;
