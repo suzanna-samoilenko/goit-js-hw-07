@@ -23,15 +23,19 @@ let size = 30;
 function createBoxes(amount) {
   destroyBoxes();
 
+  const boxesItems = [];
+
   for (let i = 0; i < amount; i++) {
     const div = document.createElement('div');
     div.style.width = `${size}px`;
     div.style.height = `${size}px`;
     div.style.backgroundColor = getRandomHexColor();
     div.style.margin = '44px 0';
-    boxes.append(div);
+    boxesItems.push(div);
+
     size += 10;
   }
+  boxes.append(...boxesItems);
 }
 
 btnDestroy.addEventListener('click', destroyBoxes);
